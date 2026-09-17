@@ -1,1 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+
+/* Navigation */
+
+header {
+    background: #0b5ed7;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #dff1ff,
+        #ffffff
+    );
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 46px;
+    color: #0b5ed7;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+button {
+    background: #0b5ed7;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #084298;
+}
+
+
+/* Sections */
+
+.section {
+    padding: 70px 7%;
+}
+
+.section h2 {
+    text-align: center;
+    color: #0b5ed7;
+    margin-bottom: 35px;
+}
+
+
+/* Dashboard Cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 35px;
+    font-weight: bold;
+    color: #0b5ed7;
+}
+
+
+/* Forms */
+
+.form-box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    flex: 1;
+    min-width: 160px;
+}
+
+
+/* Tables */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th,
+td {
+    padding: 14px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #0b5ed7;
+    color: white;
+}
+
+
+/* Doctors */
+
+.doctor-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.doctor-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.doctor-card h3 {
+    margin-bottom: 10px;
+}
+
+.doctor-card p {
+    margin-bottom: 15px;
+}
+
+.doctor-card span {
+    color: green;
+    font-weight: bold;
+}
+
+
+/* Footer */
+
+footer {
+    background: #0b5ed7;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 5px;
+        display: inline-block;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .doctor-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
